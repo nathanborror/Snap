@@ -23,6 +23,5 @@
 - (UIImageView *)previousSegment;
 - (BOOL)hasNext;
 - (BOOL)hasPrevious;
-- (void)finished;
 
 @end

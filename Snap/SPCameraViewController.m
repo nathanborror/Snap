@@ -34,12 +34,8 @@ static const CGFloat kPhotoSize = 1024;
 
   BOOL _isSaved;
   UIImage *_result;
-
   NSInteger _gridSize;
-
   NSMutableArray *_photos;
-
-//  UIActivityIndicatorView *_indicator;
 }
 
 - (id)init
@@ -60,10 +56,6 @@ static const CGFloat kPhotoSize = 1024;
   _viewFinder = [[SPTwoByTwo alloc] initWithFrame:CGRectMake(0, 80, CGRectGetWidth(self.view.bounds), CGRectGetWidth(self.view.bounds))];
   [_viewFinder setBackgroundColor:[UIColor whiteColor]];
   [self.view addSubview:_viewFinder];
-
-//  _indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-//  [_indicator setCenter:CGPointMake(CGRectGetWidth(_viewFinder.bounds)/2, CGRectGetHeight(_viewFinder.bounds)/2)];
-//  [_viewFinder addSubview:_indicator];
 
   _captureButton = [[UIButton alloc] initWithFrame:CGRectMake((CGRectGetWidth(self.view.bounds)/2)-(kCaptureButtonWidth/2), CGRectGetHeight(self.view.bounds)-(kCaptureButtonWidth+32), kCaptureButtonWidth, kCaptureButtonWidth)];
   [_captureButton addTarget:self action:@selector(capture:) forControlEvents:UIControlEventTouchUpInside];
@@ -136,16 +128,18 @@ static const CGFloat kPhotoSize = 1024;
       UIView *nextSegment = [_viewFinder nextSegment];
       [self makePreviewWithView:nextSegment];
     } else {
+      // Repurpose the capture button to be a share button.
       [_captureButton setBackgroundImage:[UIImage imageNamed:@"NextButtonDefault"] forState:UIControlStateNormal];
       [_captureButton setBackgroundImage:[UIImage imageNamed:@"NextButtonPressed"] forState:UIControlStateHighlighted];
       [_captureButton removeTarget:self action:@selector(capture:) forControlEvents:UIControlEventTouchUpInside];
       [_captureButton addTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
 
+      // Since we've taken the last photo, remove the camera preview
+      // from the last segment so we see the last photo.
       [_previewLayer removeFromSuperlayer];
-
-      [_viewFinder finished];
     }
 
+    // Only show undo button if there are photos.
     if ([_photos count] > 0) {
       [_undoButton setHidden:NO];
     } else {
@@ -204,17 +198,32 @@ static const CGFloat kPhotoSize = 1024;
 - (void)undo:(UIButton *)button
 {
   if ([_viewFinder hasPrevious]) {
+    UIImageView *retakeSegment;
+    if (_photos.count == 4) {
+      retakeSegment = [_viewFinder currentSegment];
+    } else {
+      retakeSegment = [_viewFinder previousSegment];
+    }
+
+    // Remove last photo.
+    [_photos removeLastObject];
+    NSLog(@"UNDO: %d", _photos.count);
+
+    // Clear the image preview for the segment we're going to retake and
+    // move the camera to the segment.
     [[_viewFinder currentSegment] setImage:[[UIImage alloc] init]];
+    [self makePreviewWithView:retakeSegment];
 
-    UIImageView *previousSegment = [_viewFinder previousSegment];
-    [self makePreviewWithView:previousSegment];
-
+    // Reset capture button so it's not in a sharing state.
     [_captureButton setBackgroundImage:[UIImage imageNamed:@"CameraButtonDefault"] forState:UIControlStateNormal];
     [_captureButton setBackgroundImage:[UIImage imageNamed:@"CameraButtonPressed"] forState:UIControlStateHighlighted];
     [_captureButton removeTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
     [_captureButton addTarget:self action:@selector(capture:) forControlEvents:UIControlEventTouchUpInside];
 
-    [_photos removeLastObject];
+    // Hide undo button if all photos have been cleared.
+    if (_photos.count == 0) {
+      [_undoButton setHidden:YES];
+    }
   }
 }
 

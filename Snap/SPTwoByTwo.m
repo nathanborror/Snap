@@ -89,9 +89,4 @@
   return _index > 0;
 }
 
-- (void)finished
-{
-  
-}
-
 @end
