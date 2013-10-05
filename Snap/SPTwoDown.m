@@ -9,7 +9,7 @@
 #import "SPTwoDown.h"
 
 @implementation SPTwoDown {
-  UIView *_vDivider;
+  CALayer *_verticalDivider;
   NSMutableArray *_segments;
   NSInteger _index;
 }
@@ -21,9 +21,9 @@
     _segments = [[NSMutableArray alloc] init];
     _previews = [[NSMutableArray alloc] init];
 
-    _vDivider = [[UIView alloc] init];
-    [_vDivider setBackgroundColor:[UIColor colorWithWhite:.9 alpha:1]];
-    [self addSubview:_vDivider];
+    _verticalDivider = [CALayer layer];
+    [_verticalDivider setBackgroundColor:[UIColor colorWithWhite:.9 alpha:1].CGColor];
+    [self.layer addSublayer:_verticalDivider];
 
     _segment1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), (CGRectGetHeight(self.bounds)/2))];
     [_segments addObject:_segment1];
@@ -39,8 +39,7 @@
 - (void)layoutSubviews
 {
   [super layoutSubviews];
-
-  [_vDivider setFrame:CGRectMake(0, CGRectGetHeight(self.bounds)/2, CGRectGetWidth(self.bounds), .5)];
+  [_verticalDivider setFrame:CGRectMake(0, CGRectGetHeight(self.bounds)/2, CGRectGetWidth(self.bounds), .5)];
 }
 
 - (UIView *)currentSegment

@@ -9,9 +9,9 @@
 #import "SPTwoByTwo.h"
 
 @implementation SPTwoByTwo {
-  UIView *_hDivider;
-  UIView *_vDivider;
   NSInteger _index;
+  CALayer *_horizontalDivider;
+  CALayer *_verticalDivider;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -22,13 +22,13 @@
     _previews = [[NSMutableArray alloc] init];
 
     // Dividers
-    _hDivider = [[UIView alloc] init];
-    [_hDivider setBackgroundColor:[UIColor colorWithWhite:.9 alpha:1]];
-    [self addSubview:_hDivider];
+    _horizontalDivider = [CALayer layer];
+    [_horizontalDivider setBackgroundColor:[UIColor colorWithWhite:.8 alpha:1].CGColor];
+    [self.layer addSublayer:_horizontalDivider];
 
-    _vDivider = [[UIView alloc] init];
-    [_vDivider setBackgroundColor:[UIColor colorWithWhite:.9 alpha:1]];
-    [self addSubview:_vDivider];
+    _verticalDivider = [CALayer layer];
+    [_verticalDivider setBackgroundColor:[UIColor colorWithWhite:.8 alpha:1].CGColor];
+    [self.layer addSublayer:_verticalDivider];
 
     // Segments
     _segment1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (CGRectGetWidth(self.bounds)/2), (CGRectGetHeight(self.bounds)/2))];
@@ -58,8 +58,8 @@
 {
   [super layoutSubviews];
 
-  [_hDivider setFrame:CGRectMake(CGRectGetWidth(self.bounds)/2, 0, .5, CGRectGetHeight(self.bounds))];
-  [_vDivider setFrame:CGRectMake(0, CGRectGetHeight(self.bounds)/2, CGRectGetHeight(self.bounds), .5)];
+  [_horizontalDivider setFrame:CGRectMake(CGRectGetWidth(self.bounds)/2, 0, .5, CGRectGetHeight(self.bounds))];
+  [_verticalDivider setFrame:CGRectMake(0, CGRectGetHeight(self.bounds)/2, CGRectGetHeight(self.bounds), .5)];
 }
 
 - (UIImageView *)currentSegment

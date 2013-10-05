@@ -9,7 +9,7 @@
 #import "SPTwoAcross.h"
 
 @implementation SPTwoAcross {
-  UIView *_hDivider;
+  CALayer *_horizontalDivider;
   NSMutableArray *_segments;
   NSInteger _index;
 }
@@ -21,9 +21,9 @@
     _segments = [[NSMutableArray alloc] init];
     _previews = [[NSMutableArray alloc] init];
 
-    _hDivider = [[UIView alloc] init];
-    [_hDivider setBackgroundColor:[UIColor colorWithWhite:.9 alpha:1]];
-    [self addSubview:_hDivider];
+    _horizontalDivider = [CALayer layer];
+    [_horizontalDivider setBackgroundColor:[UIColor colorWithWhite:.9 alpha:1].CGColor];
+    [self.layer addSublayer:_horizontalDivider];
 
     _segment1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, (CGRectGetWidth(self.bounds)/2), CGRectGetHeight(self.bounds))];
     [_segments addObject:_segment1];
@@ -39,8 +39,7 @@
 - (void)layoutSubviews
 {
   [super layoutSubviews];
-
-  [_hDivider setFrame:CGRectMake(CGRectGetWidth(self.bounds)/2, 0, .5, CGRectGetHeight(self.bounds))];
+  [_horizontalDivider setFrame:CGRectMake(CGRectGetWidth(self.bounds)/2, 0, .5, CGRectGetHeight(self.bounds))];
 }
 
 - (UIView *)currentSegment
