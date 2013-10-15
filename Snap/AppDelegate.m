@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SPCameraViewController.h"
+#import "SPCollectionCameraViewController.h"
 
 @implementation AppDelegate
 
@@ -16,7 +17,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   [self.window setBackgroundColor:[UIColor whiteColor]];
 
-  SPCameraViewController *viewController = [[SPCameraViewController alloc] init];
+  SPCollectionCameraViewController *viewController = [[SPCollectionCameraViewController alloc] init];
   UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
   [self.window setRootViewController:navController];
 

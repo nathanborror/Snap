@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D87F56E0180B635300CBF8FD /* SPCollectionCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F56DF180B635300CBF8FD /* SPCollectionCameraViewController.m */; };
+		D87F56E4180B63F800CBF8FD /* NBReorderableCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F56E3180B63F800CBF8FD /* NBReorderableCollectionViewLayout.m */; };
+		D87F56E7180B644D00CBF8FD /* SPPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F56E6180B644D00CBF8FD /* SPPictureCell.m */; };
 		D8CB7D7217FE1A6100F04390 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CB7D7117FE1A6100F04390 /* Foundation.framework */; };
 		D8CB7D7417FE1A6100F04390 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CB7D7317FE1A6100F04390 /* CoreGraphics.framework */; };
 		D8CB7D7617FE1A6100F04390 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CB7D7517FE1A6100F04390 /* UIKit.framework */; };
@@ -39,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D87F56DE180B635300CBF8FD /* SPCollectionCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCollectionCameraViewController.h; sourceTree = "<group>"; };
+		D87F56DF180B635300CBF8FD /* SPCollectionCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCollectionCameraViewController.m; sourceTree = "<group>"; };
+		D87F56E2180B63F800CBF8FD /* NBReorderableCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBReorderableCollectionViewLayout.h; sourceTree = "<group>"; };
+		D87F56E3180B63F800CBF8FD /* NBReorderableCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NBReorderableCollectionViewLayout.m; sourceTree = "<group>"; };
+		D87F56E5180B644D00CBF8FD /* SPPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPictureCell.h; sourceTree = "<group>"; };
+		D87F56E6180B644D00CBF8FD /* SPPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPictureCell.m; sourceTree = "<group>"; };
 		D8CB7D6E17FE1A6100F04390 /* Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CB7D7117FE1A6100F04390 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8CB7D7317FE1A6100F04390 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D87F56E1180B63E800CBF8FD /* NBKit */ = {
+			isa = PBXGroup;
+			children = (
+				D87F56E2180B63F800CBF8FD /* NBReorderableCollectionViewLayout.h */,
+				D87F56E3180B63F800CBF8FD /* NBReorderableCollectionViewLayout.m */,
+			);
+			name = NBKit;
+			sourceTree = "<group>";
+		};
 		D8CB7D6517FE1A6100F04390 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +146,7 @@
 		D8CB7D7717FE1A6100F04390 /* Snap */ = {
 			isa = PBXGroup;
 			children = (
+				D87F56E1180B63E800CBF8FD /* NBKit */,
 				D8CB7DB71800DAD700F04390 /* UI Elements */,
 				D8CB7DAD17FE85B900F04390 /* Categories */,
 				D8CB7DA317FE45C700F04390 /* View Finders */,
@@ -137,6 +156,8 @@
 				D8CB7DA117FE1ABE00F04390 /* SPCameraViewController.m */,
 				D8CB7D8317FE1A6100F04390 /* Images.xcassets */,
 				D8CB7D7817FE1A6100F04390 /* Supporting Files */,
+				D87F56DE180B635300CBF8FD /* SPCollectionCameraViewController.h */,
+				D87F56DF180B635300CBF8FD /* SPCollectionCameraViewController.m */,
 			);
 			path = Snap;
 			sourceTree = "<group>";
@@ -199,6 +220,8 @@
 			children = (
 				D8CB7DB81800DAE700F04390 /* SPSegment.h */,
 				D8CB7DB91800DAE700F04390 /* SPSegment.m */,
+				D87F56E5180B644D00CBF8FD /* SPPictureCell.h */,
+				D87F56E6180B644D00CBF8FD /* SPPictureCell.m */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -299,12 +322,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8CB7D8217FE1A6100F04390 /* AppDelegate.m in Sources */,
+				D87F56E7180B644D00CBF8FD /* SPPictureCell.m in Sources */,
 				D8CB7D7E17FE1A6100F04390 /* main.m in Sources */,
 				D8CB7DBD1801128F00F04390 /* SPBaseLayout.m in Sources */,
 				D8CB7DB617FE9E7600F04390 /* SP1x2Layout.m in Sources */,
 				D8CB7DA217FE1ABE00F04390 /* SPCameraViewController.m in Sources */,
 				D8CB7DBA1800DAE700F04390 /* SPSegment.m in Sources */,
+				D87F56E0180B635300CBF8FD /* SPCollectionCameraViewController.m in Sources */,
 				D8CB7DA617FE461A00F04390 /* SP2x2Layout.m in Sources */,
+				D87F56E4180B63F800CBF8FD /* NBReorderableCollectionViewLayout.m in Sources */,
 				D8CB7DB017FE85D100F04390 /* UIImage+Resize.m in Sources */,
 				D8CB7DB317FE9DBD00F04390 /* SP2x1Layout.m in Sources */,
 			);
@@ -507,6 +533,7 @@
 				D8CB7D9C17FE1A6100F04390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8CB7D9D17FE1A6100F04390 /* Build configuration list for PBXNativeTarget "SnapTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +542,7 @@
 				D8CB7D9F17FE1A6100F04390 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
