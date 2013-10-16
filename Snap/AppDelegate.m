@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "SPCameraViewController.h"
 #import "SPCollectionCameraViewController.h"
 
 @implementation AppDelegate

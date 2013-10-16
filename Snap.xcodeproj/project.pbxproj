@@ -22,13 +22,7 @@
 		D8CB7D8D17FE1A6100F04390 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CB7D7517FE1A6100F04390 /* UIKit.framework */; };
 		D8CB7D9517FE1A6100F04390 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8CB7D9317FE1A6100F04390 /* InfoPlist.strings */; };
 		D8CB7D9717FE1A6100F04390 /* SnapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7D9617FE1A6100F04390 /* SnapTests.m */; };
-		D8CB7DA217FE1ABE00F04390 /* SPCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7DA117FE1ABE00F04390 /* SPCameraViewController.m */; };
-		D8CB7DA617FE461A00F04390 /* SP2x2Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7DA517FE461A00F04390 /* SP2x2Layout.m */; };
 		D8CB7DB017FE85D100F04390 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7DAF17FE85D100F04390 /* UIImage+Resize.m */; };
-		D8CB7DB317FE9DBD00F04390 /* SP2x1Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7DB217FE9DBD00F04390 /* SP2x1Layout.m */; };
-		D8CB7DB617FE9E7600F04390 /* SP1x2Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7DB517FE9E7600F04390 /* SP1x2Layout.m */; };
-		D8CB7DBA1800DAE700F04390 /* SPSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7DB91800DAE700F04390 /* SPSegment.m */; };
-		D8CB7DBD1801128F00F04390 /* SPBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB7DBC1801128F00F04390 /* SPBaseLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,20 +58,8 @@
 		D8CB7D9217FE1A6100F04390 /* SnapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SnapTests-Info.plist"; sourceTree = "<group>"; };
 		D8CB7D9417FE1A6100F04390 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8CB7D9617FE1A6100F04390 /* SnapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapTests.m; sourceTree = "<group>"; };
-		D8CB7DA017FE1ABE00F04390 /* SPCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCameraViewController.h; sourceTree = "<group>"; };
-		D8CB7DA117FE1ABE00F04390 /* SPCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCameraViewController.m; sourceTree = "<group>"; };
-		D8CB7DA417FE461A00F04390 /* SP2x2Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SP2x2Layout.h; sourceTree = "<group>"; };
-		D8CB7DA517FE461A00F04390 /* SP2x2Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SP2x2Layout.m; sourceTree = "<group>"; };
 		D8CB7DAE17FE85D100F04390 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		D8CB7DAF17FE85D100F04390 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		D8CB7DB117FE9DBD00F04390 /* SP2x1Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SP2x1Layout.h; sourceTree = "<group>"; };
-		D8CB7DB217FE9DBD00F04390 /* SP2x1Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SP2x1Layout.m; sourceTree = "<group>"; };
-		D8CB7DB417FE9E7600F04390 /* SP1x2Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SP1x2Layout.h; sourceTree = "<group>"; };
-		D8CB7DB517FE9E7600F04390 /* SP1x2Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SP1x2Layout.m; sourceTree = "<group>"; };
-		D8CB7DB81800DAE700F04390 /* SPSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPSegment.h; sourceTree = "<group>"; };
-		D8CB7DB91800DAE700F04390 /* SPSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPSegment.m; sourceTree = "<group>"; };
-		D8CB7DBB1801128F00F04390 /* SPBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBaseLayout.h; sourceTree = "<group>"; };
-		D8CB7DBC1801128F00F04390 /* SPBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBaseLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,11 +131,8 @@
 				D87F56E1180B63E800CBF8FD /* NBKit */,
 				D8CB7DB71800DAD700F04390 /* UI Elements */,
 				D8CB7DAD17FE85B900F04390 /* Categories */,
-				D8CB7DA317FE45C700F04390 /* View Finders */,
 				D8CB7D8017FE1A6100F04390 /* AppDelegate.h */,
 				D8CB7D8117FE1A6100F04390 /* AppDelegate.m */,
-				D8CB7DA017FE1ABE00F04390 /* SPCameraViewController.h */,
-				D8CB7DA117FE1ABE00F04390 /* SPCameraViewController.m */,
 				D8CB7D8317FE1A6100F04390 /* Images.xcassets */,
 				D8CB7D7817FE1A6100F04390 /* Supporting Files */,
 				D87F56DE180B635300CBF8FD /* SPCollectionCameraViewController.h */,
@@ -191,21 +170,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D8CB7DA317FE45C700F04390 /* View Finders */ = {
-			isa = PBXGroup;
-			children = (
-				D8CB7DBB1801128F00F04390 /* SPBaseLayout.h */,
-				D8CB7DBC1801128F00F04390 /* SPBaseLayout.m */,
-				D8CB7DA417FE461A00F04390 /* SP2x2Layout.h */,
-				D8CB7DA517FE461A00F04390 /* SP2x2Layout.m */,
-				D8CB7DB117FE9DBD00F04390 /* SP2x1Layout.h */,
-				D8CB7DB217FE9DBD00F04390 /* SP2x1Layout.m */,
-				D8CB7DB417FE9E7600F04390 /* SP1x2Layout.h */,
-				D8CB7DB517FE9E7600F04390 /* SP1x2Layout.m */,
-			);
-			name = "View Finders";
-			sourceTree = "<group>";
-		};
 		D8CB7DAD17FE85B900F04390 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,8 +182,6 @@
 		D8CB7DB71800DAD700F04390 /* UI Elements */ = {
 			isa = PBXGroup;
 			children = (
-				D8CB7DB81800DAE700F04390 /* SPSegment.h */,
-				D8CB7DB91800DAE700F04390 /* SPSegment.m */,
 				D87F56E5180B644D00CBF8FD /* SPPictureCell.h */,
 				D87F56E6180B644D00CBF8FD /* SPPictureCell.m */,
 			);
@@ -324,15 +286,9 @@
 				D8CB7D8217FE1A6100F04390 /* AppDelegate.m in Sources */,
 				D87F56E7180B644D00CBF8FD /* SPPictureCell.m in Sources */,
 				D8CB7D7E17FE1A6100F04390 /* main.m in Sources */,
-				D8CB7DBD1801128F00F04390 /* SPBaseLayout.m in Sources */,
-				D8CB7DB617FE9E7600F04390 /* SP1x2Layout.m in Sources */,
-				D8CB7DA217FE1ABE00F04390 /* SPCameraViewController.m in Sources */,
-				D8CB7DBA1800DAE700F04390 /* SPSegment.m in Sources */,
 				D87F56E0180B635300CBF8FD /* SPCollectionCameraViewController.m in Sources */,
-				D8CB7DA617FE461A00F04390 /* SP2x2Layout.m in Sources */,
 				D87F56E4180B63F800CBF8FD /* NBReorderableCollectionViewLayout.m in Sources */,
 				D8CB7DB017FE85D100F04390 /* UIImage+Resize.m in Sources */,
-				D8CB7DB317FE9DBD00F04390 /* SP2x1Layout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
