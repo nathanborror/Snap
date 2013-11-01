@@ -285,7 +285,12 @@ static const CGFloat kPhotoSize = 1024;
 
   CALayer *rootLayer = [cell layer];
   [rootLayer setMasksToBounds:YES];
+
+  [CATransaction begin];
+  [CATransaction setDisableActions:YES];
   [_previewLayer setFrame:CGRectMake(0, 0, CGRectGetWidth(rootLayer.bounds), CGRectGetHeight(rootLayer.bounds))];
+  [CATransaction commit];
+  
   [rootLayer insertSublayer:_previewLayer above:0];
 }
 
